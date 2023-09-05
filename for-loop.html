@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+</head>
+<body>
+    
+    
+    <div>for문 반복기</div>
+
+    앞 내용 : <input type="text" id="pre1" style="width: 100px;">
+    카운트 수 : <input type="text" id="cnt" style="width: 100px;">
+    뒷 내용 : <input type="text" id="pre2" style="width: 100px;">
+
+
+    <button type="button" onclick="combine(); return false;">시작</button>
+
+    <div id="show"></div>
+</body>
+<script>
+    function combine() {
+
+        $("#show").empty();
+
+
+        var cnt = $("#cnt").val();
+
+        var pre1 = $("#pre1").val();
+        var pre2 = $("#pre2").val();
+
+        for(var i=2; i<=cnt; i++){
+
+            var combine = pre1+i+pre2+"<br>";
+
+            $("#show").append(combine);
+        }
+
+
+    }
+
+</script>
+</html>
